@@ -8,9 +8,9 @@ namespace MVCCRUDBooks.Controllers
     public class HomeController : Controller
     {
 
-        
 
-        MVCCRUDBooksDbContext _db { get; set; }
+
+        private readonly MVCCRUDBooksDbContext _db;
         public HomeController(MVCCRUDBooksDbContext db)
         {
          
@@ -20,7 +20,7 @@ namespace MVCCRUDBooks.Controllers
 
         public IActionResult ShowMeSomething()
         {
-            var item = new BooksController(_db);
+         //   var item = new BooksController(_db);
             return View("ShowMeSomething");
         }
 

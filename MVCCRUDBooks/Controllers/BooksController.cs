@@ -15,7 +15,7 @@ namespace MVCCRUDBooks.Controllers
         {
             var info = _db.Books.ToList();
 
-            return View();
+            return View(info);
         }
     }
 }
