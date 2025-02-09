@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using MVCCRUDBooks.Controllers.Data;
 using MVCCRUDBooks.Models;
 using System.Diagnostics;
 
@@ -6,18 +7,30 @@ namespace MVCCRUDBooks.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        
+
+        MVCCRUDBooksDbContext _db { get; set; }
+        public HomeController(MVCCRUDBooksDbContext db)
         {
-            _logger = logger;
+         
+            _db = db;
+        }
+
+
+        public IActionResult ShowMeSomething()
+        {
+            var item = new BooksController(_db);
+            return View("ShowMeSomething");
         }
 
         public IActionResult Index()
         {
+           
             return View();
         }
 
+      
         public IActionResult Privacy()
         {
             return View();
