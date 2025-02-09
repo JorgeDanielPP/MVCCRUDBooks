@@ -13,24 +13,24 @@ namespace MVCCRUDBooks.Controllers
         private readonly MVCCRUDBooksDbContext _db;
         public HomeController(MVCCRUDBooksDbContext db)
         {
-         
+
             _db = db;
         }
 
 
         public IActionResult ShowMeSomething()
         {
-         //   var item = new BooksController(_db);
+            //   var item = new BooksController(_db);
             return View("ShowMeSomething");
         }
 
         public IActionResult Index()
         {
-           
+
             return View();
         }
 
-      
+
         public IActionResult Privacy()
         {
             return View();

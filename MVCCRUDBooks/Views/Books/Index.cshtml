@@ -1,6 +1,7 @@
 ﻿@* using MVCCRUDBooks.Models.Entities *@
-@model List<MVCCRUDBooks.Models.Entities.Book>
-@* model List<Book> *@
+@* @model List<MVCCRUDBooks.Models.Entities.Book> *@
+@* @model List<Book> *@
+@model BooksViewModel
 
 
 @{
@@ -18,7 +19,10 @@
              <td>Editora</td>
         </tr>
 
-        @foreach(var item in Model)
+        <tr>
+            <td colspan="6"> All Books</td>
+        </tr>
+        @foreach(var item in Model.AllBooks)
         {
              <tr>
                 <td>@item.Id</td>

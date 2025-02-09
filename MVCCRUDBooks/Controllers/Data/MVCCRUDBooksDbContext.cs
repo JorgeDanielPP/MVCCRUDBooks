@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
 using MVCCRUDBooks.Models.Entities;
 
 namespace MVCCRUDBooks.Controllers.Data
@@ -8,11 +7,11 @@ namespace MVCCRUDBooks.Controllers.Data
     {
         public MVCCRUDBooksDbContext(DbContextOptions<MVCCRUDBooksDbContext> options) : base(options)
         { }
-            public DbSet<Book> Books { get; set; }
+        public DbSet<Book> Books { get; set; }
 
 
     }
 
-}     
-    
+}
+
 
