@@ -1,6 +1,6 @@
-﻿@using MVCCRUDBooks.Models.Entities
-
-@model List<Book>
+﻿@* using MVCCRUDBooks.Models.Entities *@
+@model List<MVCCRUDBooks.Models.Entities.Book>
+@* model List<Book> *@
 
 
 @{
@@ -8,7 +8,26 @@
 }
 
 <div class="text-center">
-    <<h1>
-        Bienvenidos al listado de Libros
-    </h1>
+    <table class="table table-bordered">
+        <tr>
+             <td>Id</td>
+             <td>Titulo</td>
+             <td>Categoria</td>
+             <td>Autor</td>
+             <td>FechaEdicion</td>
+             <td>Editora</td>
+        </tr>
+
+        @foreach(var item in Model)
+        {
+             <tr>
+                <td>item.Id</td>
+                <td>item.Titulo</td>
+                <td>item.Categoria</td>
+                <td>item.Autor</td>
+                <td>item.FechaEdicion</td>
+                <td>item.Editora</td>
+            </tr>
+        }
+    </table>
 </div>
