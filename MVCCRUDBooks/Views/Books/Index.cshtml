@@ -8,17 +8,22 @@
     ViewData["Title"] = "Book List";
 }
 
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
+</p>
+
 <div class="text-center">
     <table class="table table-bordered">
+        <thead>
         <tr>
-             <td>Id</td>
-             <td>Titulo</td>
-             <td>Categoria</td>
-             <td>Autor</td>
-             <td>FechaEdicion</td>
-             <td>Editora</td>
+             <th>Id</th>
+             <th>Titulo</th>
+             <th>Categoria</th>
+             <th>Autor</th>
+             <th>FechaEdicion</th>
+             <th>Editora</th>
         </tr>
-
+        </thead>
         <tr>
             <td colspan="6"> All Books</td>
         </tr>
@@ -31,6 +36,11 @@
                 <td>@item.Autor</td>
                 <td>@item.FechaEdicion</td>
                 <td>@item.Editora</td>
+                <td>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
             </tr>
         }
     </table>

@@ -9,7 +9,7 @@ namespace MVCCRUDBooks.Controllers.Data
     {
         public MVCCRUDBooksDbContext(DbContextOptions<MVCCRUDBooksDbContext> options) : base(options)
         { }
-       public DbSet<Models.Entities.Book> Books { get; set; }
+       public DbSet<Book> Books { get; set; }
 
 
     }
