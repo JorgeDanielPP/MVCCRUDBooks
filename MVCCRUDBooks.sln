@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCCRUDBooks", "MVCCRUDBooks\MVCCRUDBooks.csproj", "{49570540-5C55-4A77-A794-9044758B30B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCCRUDBooks", "MVCCRUDBooks\MVCCRUDBooks.csproj", "{49570540-5C55-4A77-A794-9044758B30B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{8FDF0B43-9D64-4C7E-BF41-92ADF420EF31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

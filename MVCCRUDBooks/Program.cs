@@ -1,7 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using MVCCRUDBooks.Controllers.Data;
+using Microsoft.Extensions.DependencyInjection;
+using MVCCRUDBooks.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MVCCRUDBooksContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MVCCRUDBooksContext") ?? throw new InvalidOperationException("Connection string 'MVCCRUDBooksContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

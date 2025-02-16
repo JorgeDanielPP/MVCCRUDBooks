@@ -10,12 +10,12 @@ namespace MVCCRUDBooks.Controllers
 
 
 
-        private readonly MVCCRUDBooksDbContext _db;
-        public HomeController(MVCCRUDBooksDbContext db)
-        {
+       // private readonly MVCCRUDBooksDbContext _db;
+      //  public HomeController(MVCCRUDBooksDbContext db)
+      //  {
 
-            _db = db;
-        }
+      //      _db = db;
+      //  }
 
 
         public IActionResult ShowMeSomething()
